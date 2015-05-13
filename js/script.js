@@ -26,3 +26,8 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 $('.footer-year').text((new Date).getFullYear());
+
+$("#heading-title").typed({
+    strings: ["Designer", "Developer","Programmer","UX Designer",""],
+    typeSpeed: 200, loop: true
+});

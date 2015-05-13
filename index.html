@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="appOne">
 
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="I am a Front-end developer by profession and a graphics designer by hobby. I have around 4 years of professional experience specialized in .NET Technologies, ADOBE Packages, HTML5, Javascript/JQuery, CSS and others. I follow every project through complete software development cycle. As a Graphics designer, I have a strong hold on Website layout, Corporate Branding & designing, banner design, Brochure design and Character Concepts. As a Web developer I have strong grip on Upcoming web technologies both server and client based."/>
-<meta name="keywords" content="Front-end developer, Graphics design, .NET Technologies, ADOBE Packages, HTML5, Javascript/JQuery, CSS, Website layout, Corporate Branding Designing, Banner Design, Brochure design and Character Concepts."/>
+    <meta name="description" content="I am a Front-end developer by profession and a graphics designer by hobby. I have around 4 years of professional experience specialized in .NET Technologies, ADOBE Packages, HTML5, Javascript/JQuery, CSS and others. I follow every project through complete software development cycle. As a Graphics designer, I have a strong hold on Website layout, Corporate Branding & designing, banner design, Brochure design and Character Concepts. As a Web developer I have strong grip on Upcoming web technologies both server and client based." />
+    <meta name="keywords" content="Front-end developer, Graphics design, .NET Technologies, ADOBE Packages, HTML5, Javascript/JQuery, CSS, Website layout, Corporate Branding Designing, Banner Design, Brochure design and Character Concepts." />
     <meta name="author" content="Muhammad Faizan Atiq">
 
     <title>Muhammad Faizan Atiq | Front-End Developer/ Graphics Designer/ UX Enthusiast</title>
@@ -16,10 +16,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/agency.css" rel="stylesheet">
+    <link href="less/agency.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="flaticon/flaticon.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
     <!--<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>-->
@@ -35,7 +36,7 @@
 
 </head>
 
-<body id="page-top" class="index" ng-app="app">
+<body id="page-top" class="index" ng-controller="porfolioController as users">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -84,8 +85,8 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome To my Website!</div>
-                <div class="intro-heading">Designer with &lt; <span class="text-secondary">Style</span> &gt;</div>
-                <a href="#services" class="page-scroll btn btn-xl">Know me more</a>
+                <div class="intro-heading"><span class="text-secondary">[</span> <span id="heading-title">designer</span> <span class="text-secondary">]</span> with &lt; <span class="text-secondary">Style</span> &gt;</div>
+                <a href="#services" class="page-scroll btn btn-xl">Who am i</a>
             </div>
         </div>
     </header>
@@ -95,37 +96,48 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Not So Good @</h2>
-                    <h3 class="section-subheading text-muted">my skills at its best.</h3>
+                    <h2 class="section-heading">Good @ many things </h2>
+                    <h3 class="section-subheading text-muted">my skill set explains what i do</h3>
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">E-Commerce</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Responsive Design</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Web Security</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle  fa-stack-2x text-primary"></i>
+                            <i class="fa flaticon fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">Web Design &amp; Development</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">Web Design</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa flaticon-effects fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">Motion Design</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">Web Security</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Portfolio Grid Section -->
@@ -133,10 +145,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div ng-controller="porfolio as users">
-                       
-                            <a>{{users.person.name}}</a>
-                       
+                    <div>
+                        <a>{{users.person.name}}</a>
+                        <div data-ng-repeat="project in behance.$$state.$$state.value.projects">
+                            {{ project.name }}
+                        </div>
                     </div>
                     <h2 class="section-heading">Portfolio</h2>
                     <h3 class="section-subheading text-muted">I like to work and these are some examples</h3>
@@ -302,9 +315,11 @@
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <h4>Be Part
+                                <h4>
+                                    Be Part
                                     <br>Of Our
-                                    <br>Story!</h4>
+                                    <br>Story!
+                                </h4>
                             </div>
                         </li>
                     </ul>
@@ -329,11 +344,14 @@
                         <h4>Kay Garland</h4>
                         <p class="text-muted">Lead Designer</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -344,11 +362,14 @@
                         <h4>Larry Parker</h4>
                         <p class="text-muted">Lead Marketer</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -359,11 +380,14 @@
                         <h4>Diana Pertersen</h4>
                         <p class="text-muted">Lead Developer</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -404,7 +428,7 @@
             </div>
         </div>
     </aside>
-    
+
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -458,19 +482,24 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/mfaizanattique"><i class="fa fa-twitter"></i></a>
+                        <li>
+                            <a href="https://twitter.com/mfaizanattique"><i class="fa fa-twitter"></i></a>
                         </li>
-                        <li><a href="https://www.facebook.com/mfaizanattique"><i class="fa fa-facebook"></i></a>
+                        <li>
+                            <a href="https://www.facebook.com/mfaizanattique"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="https://www.linkedin.com/in/faizanatiq"><i class="fa fa-linkedin"></i></a>
+                        <li>
+                            <a href="https://www.linkedin.com/in/faizanatiq"><i class="fa fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
+                        <li>
+                            <a href="#">Privacy Policy</a>
                         </li>
-                        <li><a href="#">Terms of Use</a>
+                        <li>
+                            <a href="#">Terms of Use</a>
                         </li>
                     </ul>
                 </div>
@@ -480,7 +509,6 @@
 
     <!-- Portfolio Modals -->
     <!-- Use the modals below to showcase details about your portfolio projects! -->
-
     <!-- Portfolio Modal 1 -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -500,7 +528,8 @@
                             <img class="img-responsive img-centered" src="img/portfolio/roundicons-free.png" alt="">
                             <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                             <p>
-                                <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
+                                <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.
+                            </p>
                             <ul class="list-inline">
                                 <li>Date: July 2014</li>
                                 <li>Client: Round Icons</li>
@@ -658,9 +687,12 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
+    <!--<script data-require="angular.js@1.0.x" src="http://code.angularjs.org/1.0.7/angular.min.js" data-semver="1.0.7"></script>-->
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="js/app.js"></script>
     <!-- Contact Form JavaScript -->
+
+    <script src="js/typed.min.js"></script>
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 

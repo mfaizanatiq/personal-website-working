@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body ng-app="appOne">
+    
+    <div class="control" ng-controller="porfolioController as testme">
+        {{"Person Name:"+testme.person.name}}
+
+        <div class="control" ng-repeat="p in testme.person">
+            {{p.name}}+{{p.profession}}
+            </div>
+
+        <div class="control" ng-repeat="p1 in testme.behance.projects">
+            {{p1.name}}
+        </div>
+
+
+        </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
