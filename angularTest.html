@@ -12,8 +12,10 @@
             {{p.name}}+{{p.profession}}
             </div>
 
-        <div class="control" ng-repeat="p1 in testme.behance.projects">
-            {{p1.name}}
+        <div class="control">
+            <ul>
+                <li ng-repeat="p1 in behanceProjects">{{p1.name}}</li>
+            </ul>
         </div>
 
 

@@ -1,10 +1,26 @@
 ﻿(function () {
     var app = angular.module('appOne', []);
-    app.controller('porfolioController', function ($scope,behFactory) {
+    app.controller('porfolioController', function ($scope, behFactory) {
 
-        this.person = [{ name: 'Faizan', profession: 'Web developer', salary: [1500,1650,1900]  }, { name: 'Farrukh', profession: 'Team Lead Operations' }];
-        this.behance = behFactory.async();
-        console.log(this.behance);
+        //this.person = [{ name: 'Faizan', profession: 'Web developer', salary: [1500, 1650, 1900] }, { name: 'Farrukh', profession: 'Team Lead Operations' }];
+
+        //this.behance = behFactory.async();
+        //console.log(this.behance);
+
+        var promise = behFactory.async();
+        promise.then(
+          function (behanceData) {
+              $scope.behanceProjects = behanceData.projects;
+          },
+          function (errorData) {
+              console.log('failure loading Projects', errorData);
+          });
+
+        $scope.getProject = function (obj) {
+            alert(obj);
+            console.log(obj);
+        }
+
     });
 
 
@@ -18,6 +34,7 @@
                     alert(status);
                 }).success(function (response, status) {
                     //console.log(response.projects);
+                    //return response.projects;
                 }).then(function (response, status) {
                     return response.data;
                 });
