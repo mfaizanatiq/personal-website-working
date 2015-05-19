@@ -372,7 +372,8 @@ section h3.section-subheading {
   position: absolute;
   content: "";
   width: 2px;
-  background-color: #f1f1f1;
+  /*background-color: #f1f1f1;*/
+  background-color: #ff6a00;
   left: 40px;
   margin-left: -1.5px;
 }
@@ -445,6 +446,9 @@ section h3.section-subheading {
 }
 .timeline > li:last-child {
   margin-bottom: 0;
+}
+.timeline > li:last-child > .timeline-image {
+  border-color: #ff6a00;
 }
 .timeline .timeline-heading h4 {
   margin-top: 0;

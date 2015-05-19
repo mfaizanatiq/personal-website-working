@@ -337,7 +337,8 @@ section {
         position: absolute;
         content: "";
         width: 2px;
-        background-color: #f1f1f1;
+        /*background-color: #f1f1f1;*/
+        background-color: @text-secondary;
         left: 40px;
         margin-left: -1.5px;
     }
@@ -409,6 +410,9 @@ section {
         }
         &:last-child {
         	margin-bottom: 0;
+        }
+        &:last-child > .timeline-image{
+            border-color:@text-secondary;
         }
     }
 	.timeline-heading {
